@@ -33,7 +33,7 @@ public class Nasa
         double fitnessLevel = 0;
         int planetIndex = 0;
         
-        int typeSpeed = 15;
+        int typeSpeed = 20;
         
         String response = "";
 
