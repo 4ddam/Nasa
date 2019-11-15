@@ -285,14 +285,14 @@ public class Nasa
                 while (counter == 0)
                 {
                     message = "\nEnter the number of the planet you want to travel to: ";
-                    Type(message, 25);
+                    Type(message, typeSpeed);
 
                     planetIndex = Input.nextInt();
 
                     if (planetIndex < 1 || planetIndex > 9)
                     {
                         message = "\nThat is not an option. ";
-                        Type(message, 25);
+                        Type(message, typeSpeed);
                     } else
                     {
                         counter++;
