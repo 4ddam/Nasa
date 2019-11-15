@@ -32,10 +32,13 @@ public class Nasa
         double weight = 0;
         double fitnessLevel = 0;
         int planetIndex = 0;
+        
+        int typeSpeed = 15;
+        
         String response = "";
 
         String message = "Enter '1' to remove dialogue. Enter any other key to continue. ";
-        Type(message, 25);
+        Type(message, typeSpeed);
         String skip = Input.nextLine();
 
         System.out.print("\f");
@@ -44,20 +47,20 @@ public class Nasa
         {
 
             message = "Hello! I am your Ship-based Artificial Intelligence Lattice, or S.A.I.L.";
-            Type(message, 25);
+            Type(message, typeSpeed);
             waitTime();
 
             message = "\nYou just woke up and are currently on an unknown planet. ";
-            Type(message, 25);
+            Type(message, typeSpeed);
             waitTime();
 
             message = "\nI never got your name before you blacked out. ";
-            Type(message, 25);
+            Type(message, typeSpeed);
             waitTime2();
         }
 
         message = "What is your name? ";
-        Type(message, 25);
+        Type(message, typeSpeed);
 
         String name = Input.nextLine();
 
@@ -66,7 +69,7 @@ public class Nasa
         if (!skip.equalsIgnoreCase("1"))
         {
             message = newName + " it is then. ";
-            Type(message, 25);
+            Type(message, typeSpeed);
             waitTime();
 
             System.out.print("\n");
@@ -77,17 +80,17 @@ public class Nasa
         while (counter == 0)
         {
             message = "What is your weight? ";
-            Type(message, 25);
+            Type(message, typeSpeed);
 
             weight = Input.nextDouble();
             if (weight < 50)
             {
                 message = "I know your weight is at least 50 lbs!\n";
-                Type(message, 25);
+                Type(message, typeSpeed);
             } else if (weight > 250)
             {
                 message = "I know your weight is not greater then 250 lbs!\n";
-                Type(message, 25);
+                Type(message, typeSpeed);
             } else
             {
                 counter++;
@@ -98,7 +101,7 @@ public class Nasa
         {
 
             message = "So, you are " + weight + " lbs then.\n";
-            Type(message, 25);
+            Type(message, typeSpeed);
             waitTime();
         }
 
@@ -107,17 +110,17 @@ public class Nasa
         while (counter == 0)
         {
             message = "What is your fitness level from on a scale of 0 - 100? ";
-            Type(message, 25);
+            Type(message, typeSpeed);
 
             fitnessLevel = Input.nextDouble();
             if (fitnessLevel < 0)
             {
                 message = "You must choose and number from 0 - 100!\n";
-                Type(message, 25);
+                Type(message, typeSpeed);
             } else if (fitnessLevel > 100)
             {
                 message = "You must choose and number from 0 - 100!\n";
-                Type(message, 25);
+                Type(message, typeSpeed);
             } else
             {
                 counter++;
@@ -127,36 +130,36 @@ public class Nasa
         if (!skip.equalsIgnoreCase("1"))
         {
             message = "Unfortunately, you should not leave this space ship due to the unknown climate of this planet.";
-            Type(message, 25);
+            Type(message, typeSpeed);
             waitTime();
 
             message = "\nLet's travel to another planet.\n";
-            Type(message, 25);
+            Type(message, typeSpeed);
             waitTime();
 
         }
 
         message = "\nPlanets:\n";
-        Type(message, 25);
+        Type(message, typeSpeed);
 
         for (int i = 1; i <= planets.length-1; i++)
         {
             message = i + ") " + planets[i].getName() + "\n";
-            Type(message, 25);
+            Type(message, typeSpeed);
         }
         counter = 0;
 
         while (counter == 0)
         {
             message = "\nEnter the number of the planet you want to travel to: ";
-            Type(message, 25);
+            Type(message, typeSpeed);
 
             planetIndex = Input.nextInt();
 
             if (planetIndex < 1 || planetIndex > 9)
             {
                 message = "\nThat is not an option. ";
-                Type(message, 25);
+                Type(message, typeSpeed);
             } else
             {
                 counter++;
@@ -170,7 +173,7 @@ public class Nasa
         traveling();
 
         message = "You have arrived at " + planets[planetIndex].getName() + "\n";
-        Type(message, 25);        
+        Type(message, typeSpeed);        
 
         waitTime();
 
