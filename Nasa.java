@@ -545,10 +545,5 @@ public class Nasa
             Thread.currentThread().interrupt();
         }   
     }
-
-    private static void Earth()
-    {
-        //System
-    }
 }
 
