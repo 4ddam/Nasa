@@ -218,7 +218,7 @@ public class Nasa
                     food = "some brownies";
                 } else if (randomFoodNumber >= 5 && randomFoodNumber < 6)
                 {
-                    food = "some chocolate budding";
+                    food = "some chocolate pudding";
                 } else if (randomFoodNumber >= 6)
                 {
                     food = "some beef jerky";
@@ -278,7 +278,7 @@ public class Nasa
                 for (int i = 1; i <= planets.length-1; i++)
                 {
                     message = i + ") " + planets[i].getName() + "\n";
-                    Type(message, 25);
+                    Type(message, typeSpeed);
                 }
                 counter = 0;
 
@@ -306,7 +306,7 @@ public class Nasa
                 traveling();
 
                 message = "You have arrived at " + planets[planetIndex].getName() + "\n";
-                Type(message, 25);
+                Type(message, typeSpeed);
                 
                 waitTime();
                 
@@ -335,7 +335,7 @@ public class Nasa
             {
                 System.out.print("\f");
                 message = "Goodbye!";
-                Type(message, 25); 
+                Type(message, typeSpeed); 
                 break;
             } else
             {
