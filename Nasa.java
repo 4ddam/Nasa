@@ -13,6 +13,8 @@ public class Nasa
 {
     public static void main ()
     {     
+        ///////////////////////// START UP
+               
         Planet[] planets = new Planet[10];
 
         planets[0] = new Planet("X", 0, "0", 0);
@@ -180,6 +182,8 @@ public class Nasa
         Input.nextLine();
         
         System.out.println(Astro);
+        
+        ///////////////////////// END OF INTRO, STARTING LOOP
 
         while (true)
         {           
@@ -345,6 +349,8 @@ public class Nasa
             }
         }
     }
+    
+    ///////////////////////// TRAVELING ANIMATION
 
     private static void traveling()
     {
@@ -482,6 +488,8 @@ public class Nasa
         System.out.print("\f");
     }
 
+    ///////////////////////// ACTIONS IMAGE
+    
     private static void actions()
     {
         System.out.println("\n");
@@ -510,6 +518,8 @@ public class Nasa
         System.out.println("    |___________________________________.         ._____________________________________|    ");
         System.out.println("                                         '-------'                                           ");      
     }
+    
+    ///////////////////////// TYPE SPEED
 
     private static void Type(String message, long speed)            // decrease speed to increase overall speed (sleeping for less time)
     {
@@ -527,6 +537,8 @@ public class Nasa
             }
         }
     }
+    
+    ///////////////////////// WAIT TIMES
 
     private static void waitTime()
     {
